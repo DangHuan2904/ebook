@@ -1,0 +1,106 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <base href="..">
+  <title>Eloquent JavaScript :: Code Sandbox</title>
+
+  <script src="js/acorn_codemirror.js"></script>
+  <link rel="stylesheet" href="js/node_modules/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="css/ejs.css">
+  <script src="js/sandbox.js"></script>
+  <script src="js/chapter_info.js"></script>
+  <script src="js/code.js"></script>
+
+  <style>
+    .control { font-size: 15px }
+    article {
+    margin: 0 auto;
+    max-width: 35em;
+    padding: 2em 1em 5em;
+    position: relative;
+    overflow-wrap: break-word;}
+    a {text-decoration: none;}
+    a, a:visited, a:active{color: #467;}
+    body {
+    font-family: Georgia, 'Nimbus Roman No9 L', 'Century Schoolbook L', serif;
+    font-size: 20px;
+    line-height: 1.45;
+    color: black;
+    background: white;}
+    span  {color: #467}
+  </style>
+</head>
+
+<body>
+  <div style="background: #ffb; border-bottom: 1px solid silver; padding: 6px 4em; text-align: center">
+    <strong>Note:</strong> If you are reading the <strong>second edition</strong> of the book,
+    you'll want to go
+    to <a href="https://eloquentjavascript.net/2nd_edition/code/">that
+    edition's sandbox</a> instead!
+  </div>
+
+  <article style="max-width: 50em;">
+    <h1>Code Sandbox<div style="font-size: 70%"><a class="subtlelink" href="../index.html">Eloquent JavaScript</a></div></h1>
+
+    <p>You can use this page to download source code and solutions to
+    exercises for the book Eloquent JavaScript, and to directly run code
+    in the context of chapters from that book, either to solve exercises
+    to simply play around.</p>
+
+    <p>
+      Chapter: <select id="chapters" class="control"><option value="0">0. Introduction</option><option value="1">1. Values, Types, and Operators</option><option value="2">2. Program Structure</option><option value="3">3. Functions</option><option value="4">4. Data Structures: Objects and Arrays</option><option value="5">5. Higher-Order Functions</option><option value="6">6. The Secret Life of Objects</option><option value="7">7. Project: A Robot</option><option value="8">8. Bugs and Errors</option><option value="9">9. Regular Expressions</option><option value="10">10. Modules</option><option value="11">11. Asynchronous Programming</option><option value="12">12. Project: A Programming Language</option><option value="13">13. JavaScript and the Browser</option><option value="14">14. The Document Object Model</option><option value="15">15. Handling Events</option><option value="16">16. Project: A Platform Game</option><option value="17">17. Drawing on Canvas</option><option value="18">18. HTTP and Forms</option><option value="19">19. Project: A Pixel Art Editor</option><option value="20">20. Node.js</option><option value="21">21. Project: Skill-Sharing Website</option><option value="22">22. JavaScript and Performance</option></select>
+      <select id="per_chapter" class="control"><option value="box">This chapter has no exercises</option></select>
+      <button id="run" class="control">run code</button>
+    </p>
+
+    <div class="editor-wrap">
+      <textarea id="editor" style="display: none;"></textarea><div class="CodeMirror cm-s-default"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5px; left: 26px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 16px; margin-bottom: -17px; border-right-width: 13px; min-height: 104px; min-width: 488px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 10px; top: 0px; height: 24px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -16px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 13px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// Run code here in the context of Chapter 0</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -16px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 13px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -16px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 13px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">sum</span>(<span class="cm-variable">range</span>(<span class="cm-number">1</span>, <span class="cm-number">10</span>)));</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -16px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 13px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top: 104px;"></div><div class="CodeMirror-gutters" style="height: 117px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 16px;"></div></div></div></div>
+      <div class="sandbox-output" id="output"></div>
+    </div>
+
+    <div id="runLocally" style="display: none;">
+      To run this chapter's code locally, use these files:
+      <ul id="local-files" style="font-family: 'PT Mono', monospace; margin-top: 0"></ul>
+    </div>
+
+    <div id="fileInfo" style="">
+      These files contain this chapter’s project code:
+      <ul id="files" style="font-family: 'PT Mono', monospace; margin-top: 0"><li><a href="code/intro.js">intro.js</a></li></ul>
+    </div>
+
+    <p id="exercise_info" style="display: none;">If you've solved the exercise and want to compare your code with
+    mine, or you <em>really</em> tried, but can't get your code to work,
+    you can <button id="solution" style="color: #c22;" class="control">look at the
+    solution</button> (or <a id="download">download it</a>).</p>
+
+    <p id="box_info">
+      The base environment for this chapter (if any) is available in the
+      sandbox above, allowing you to run the chapter's examples by
+      simply pasting them into the editor.
+    </p>
+    <div class="editor-wrap">
+      <textarea id="editor" style="display: none;"></textarea><div class="CodeMirror cm-s-default"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 5px; left: 26px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;" tabindex="0"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 16px; margin-bottom: -17px; border-right-width: 13px; min-height: 104px; min-width: 448px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><span><span>​</span>x</span></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 10px; top: 0px; height: 24px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -16px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 13px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// Run code here in the context of Chapter 0</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -16px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 13px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -16px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 13px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">console</span>.<span class="cm-property">log</span>(<span class="cm-variable">sum</span>(<span class="cm-variable">range</span>(<span class="cm-number">1</span>, <span class="cm-number">10</span>)));</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -16px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 13px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 13px; width: 1px; border-bottom: 0px solid transparent; top: 104px;"></div><div class="CodeMirror-gutters" style="height: 117px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 16px;"></div></div></div></div>
+      <div class="sandbox-output" id="output"></div>
+    </div>
+    <div id="runLocally" style="display: none;">
+      To run this chapter's code locally, use these files:
+      <ul id="local-files" style="font-family: 'PT Mono', monospace; margin-top: 0"></ul>
+    </div>
+    <div id="fileInfo" style="">
+      These files contain this chapter’s project code:
+      <ul id="files" style="font-family: 'PT Mono', monospace; margin-top: 0"><li><a href="code/intro.js">intro.js</a></li></ul>
+    </div>
+    <p id="exercise_info" style="display: none;">If you've solved the exercise and want to compare your code with
+        mine, or you <em>really</em> tried, but can't get your code to work,
+        you can <button id="solution" style="color: #c22;" class="control">look at the
+        solution</button> (or <a id="download">download it</a>).
+    </p>
+      <p id="box_info">
+      The base environment for this chapter (if any) is available in the
+      sandbox above, allowing you to run the chapter's examples by
+      simply pasting them into the editor.
+    </p>
+  </article>
+</body>
+</html>
